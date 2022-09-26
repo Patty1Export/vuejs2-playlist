@@ -22,7 +22,9 @@ export default {
 
 }
 </script>
-
-<style>
-
+<!--Add scoped to add style specifically-->
+<style scoped>
+h1{
+  color:purple;
+}
 </style>
