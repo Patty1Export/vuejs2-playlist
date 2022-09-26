@@ -11,16 +11,16 @@
 
 <script>
  export default{
+  //Add objects in props with validation of type and required
+  props:{
+    ninjas:{
+      type:Array,
+      required:true,
+    }
+  },
   data(){
     return{
-      ninjas:[
-        {name:'Ryu', specialty:'Vue Components', show:false},
-        {name:'Crystal', specialty:'HTML Wizardy', show:false},
-        {name:'Histoshi', specialty:'Click Events', show:false},
-        {name:'Tango', specialty:'Conditionals', show:false},
-        {name:'Kami', specialty:'Webpack', show:false},
-        {name:'Yoshi', specialty:'Data Diggin', show:false},
-    ]
+
     }
   }
  }
