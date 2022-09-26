@@ -1,8 +1,17 @@
 <template>
   <div>
     <form-helper>
-      <h2 slot="title">{{title}}</h2>
-      <p slot="text">I am the the paragraph text of the slot</p> <!--Add slot attribute with a "text" name-->
+      <div slot="form-header">
+        <h3>This is the title of the form</h3>
+        <p>Information about the form</p>
+      </div>
+      <div slot="form-fields">
+          <input type="text" placeholder="name" required />
+          <input type="text" placeholder="password" required />
+      </div>
+      <div slot="form-controls">
+        <button v-on:click="handleSubmit">Submit</button>
+      </div>
     </form-helper>
   </div>
 
