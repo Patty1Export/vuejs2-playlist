@@ -1,33 +1,24 @@
 <template>
   <div>
-    <!--Dynamic Component-->
-    <keep-alive>
-      <component v-bind:is="component"></component> <!--add data binding-->
-    </keep-alive>
-    <button v-on:click="component = 'form-one'">Show Form One</button>
-    <button v-on:click="component = 'form-two'">Show Form Two</button>
+    <add-blog></add-blog>
   </div>
 </template>
-<!--Update Both Components in Header and Footer-->
+
 <script>
-import formOne from './components/formOne.vue';
-import formTwo from './components/formTwo.vue';
+import addBlog from './components/addBlog.vue';
 
 export default{
-  components:{
-    'form-one':formOne,
-    'form-two':formTwo,
-  },
+  components: {
+        'add-blog': addBlog
+    },
   data(){
     return{
-      component: 'form-one',
+
     }
   },
 
   methods:{
-    handleSubmit: function(){
-            alert('thanks for submitting');
-    }
+
   }
  }
 
@@ -35,8 +26,7 @@ export default{
 
 <style scoped>
 body{
-    margin: 0;
-    font-family: 'Nunito SemiBold';
+  margin:0;
+  font-family:'Nunito Semibold';
 }
-
 </style>
