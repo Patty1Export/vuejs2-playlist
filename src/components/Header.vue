@@ -16,9 +16,11 @@
       title:"Vue Ninjas"
     }
   },
-  methods:function(){
-    this.title ="Vue Wizards",
-  }
+  methods:{
+    changeTitle:function(){
+      this.$emit('changeTitle', 'Vue Wizards'); //emitting events to change title Vue Wizards
+    }
+  },
  }
 
 </script>

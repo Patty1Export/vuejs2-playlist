@@ -1,12 +1,14 @@
 <template>
   <div>
-    <app-header v-bind:title="title"></app-header>
+
+    <!--rendering updated titles-->
+    <app-header v-bind:title="title" v-on:changeTitle="updateTitle($event)"></app-header>
     <app-ninjas v-bind:ninjas="ninjas"></app-ninjas> <!--add props for the template-->
-    <app-footer  v-bind:title="title"></app-footer>
+    <app-footer v-bind:title="title"></app-footer>
   </div>
 
 </template>
-
+<!--Update Both Components in Header and Footer-->
 <script>
 import Header from './components/Header.vue';
 import Footer from './components/Footer.vue';
@@ -29,6 +31,13 @@ export default{
         {name:'Yoshi', specialty:'Data Diggin', show:false},
       ],
       title:"Vue Ninjas"
+    }
+  },
+
+  //reacted events
+  methods:{
+    updateTitle: function(updatedTitle){
+      this.title = updatedTitle;
     }
   }
  }
