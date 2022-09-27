@@ -34,6 +34,19 @@ export default{
         return blog.title.match(this.search);
       });
     }
+  },
+  //register things locally
+  filters:{
+    toUppercase(value){
+      return value.toUpperCase();
+    }
+  },
+  directives:{
+    'rainbow':{
+      bind(el,binding, vnode){
+        el.style.color = "#" + Math.random().toString(16).slice(2,8);
+      }
+    }
   }
  }
 
